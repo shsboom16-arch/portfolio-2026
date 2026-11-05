@@ -891,10 +891,15 @@ body {
     justify-content: center;
     overflow: hidden;
     border-bottom: 1px solid var(--border-dim);
+    transition: var(--tr-smooth);
+}
+
+.work-card:hover .work-thumbnail-box {
+    border-bottom-color: var(--border-subtle);
 }
 
 .work-thumbnail-box.vertical-hint-box {
-    background: radial-gradient(circle at center, #261f36 0%, #110e1a 100%) !important;
+    background: radial-gradient(circle at center, #261f36 0%, #0d0a14 100%) !important;
 }
 
 .thumbnail-inner-art {
@@ -905,17 +910,23 @@ body {
     align-items: center;
     justify-content: center;
     pointer-events: none;
+    background: 
+        radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 65%),
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 100% 100%, 30px 30px, 30px 30px;
 }
 
 .category-watermark {
-    font-size: 4.5rem;
-    color: rgba(255, 255, 255, 0.08);
-    transition: transform 0.4s ease;
+    font-size: 5rem;
+    color: rgba(255, 255, 255, 0.09);
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.6));
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), color 0.5s ease;
 }
 
 .work-card:hover .category-watermark {
-    transform: scale(1.1);
-    color: rgba(212, 175, 55, 0.15);
+    transform: scale(1.15) rotate(2deg);
+    color: rgba(212, 175, 55, 0.22);
 }
 
 .aspect-badge {
@@ -926,24 +937,36 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    padding: 3px 10px;
-    border-radius: 4px;
-    background: rgba(7, 8, 10, 0.85);
-    border: 1px solid var(--border-dim);
-    color: var(--text-muted);
+    padding: 4px 12px;
+    border-radius: 6px;
+    background: rgba(7, 8, 10, 0.9);
+    border: 1px solid var(--border-subtle);
+    color: var(--gold-champagne);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .aspect-badge.highlight-aspect {
-    color: var(--gold-champagne);
-    border-color: var(--border-subtle);
-    background: rgba(18, 14, 28, 0.9);
+    color: #F8FAFC;
+    border-color: var(--gold-primary);
+    background: rgba(26, 20, 42, 0.95);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
 }
 
 .thumbnail-play-btn {
-    width: 58px;
-    height: 58px;
-    font-size: 1.15rem;
+    width: 62px;
+    height: 62px;
+    font-size: 1.25rem;
     z-index: 2;
+    border-radius: 50%;
+    background: var(--gold-gradient);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8), 0 0 25px rgba(212, 175, 55, 0.35);
+}
+
+.thumbnail-play-btn:hover {
+    transform: scale(1.12);
+    box-shadow: 0 10px 40px rgba(212, 175, 55, 0.6);
 }
 
 .work-card-body {
@@ -988,27 +1011,46 @@ body {
     background: transparent;
     border: none;
     color: var(--gold-champagne);
-    font-size: 0.88rem;
+    font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 0.04em;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     cursor: pointer;
-    padding: 6px 0;
+    padding: 8px 0;
     transition: var(--tr-fast);
+}
+
+.btn-action-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--gold-gradient);
+    color: #07080a;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    padding-left: 2px;
+    box-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .btn-card-action:hover {
     color: #FFFFFF;
-    transform: translateX(4px);
+}
+
+.btn-card-action:hover .btn-action-icon {
+    transform: scale(1.12);
+    box-shadow: 0 4px 18px rgba(212, 175, 55, 0.5);
 }
 
 .link-external-card {
     color: var(--text-muted);
     font-size: 0.9rem;
-    padding: 6px 10px;
-    border-radius: 6px;
+    padding: 8px 12px;
+    border-radius: 8px;
     border: 1px solid var(--border-dim);
     text-decoration: none;
     transition: var(--tr-fast);
