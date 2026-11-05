@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hussein Mohamed — Video Editor, Motion Designer & Videographer Portfolio. High-end visual storytelling and cinematic production.">
-    <title>Hussein Mohamed | Video Editor, Motion Designer & Videographer</title>
+    <meta name="description" content="Hussein Mohamed — Video Editor, Motion Designer & Videographer. Commercials, performance reels, and cinematic storytelling.">
+    <title>Hussein Mohamed | Video Editing, Motion Design & Videography</title>
 
-    <!-- Google Fonts: Syne (Sleek, Calm, Editorial Modern) & Plus Jakarta Sans -->
+    <!-- Google Fonts: Syne (Headings) & Plus Jakarta Sans (Body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
@@ -15,93 +15,115 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- Custom Luxury Stylesheet -->
+    <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Top Reading Progress Bar -->
-    <div class="reading-progress-bar"></div>
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress-bar" aria-hidden="true"></div>
 
-    <!-- Custom Smooth Luxury Cursor -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-circle"></div>
+    <!-- Custom Luxury Cursor (Desktop only, passive) -->
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-circle" aria-hidden="true"></div>
 
-    <!-- Atmospheric Background Elements -->
-    <div class="noise-overlay"></div>
-    <div class="gold-ambient gold-ambient-1"></div>
-    <div class="gold-ambient gold-ambient-2"></div>
+    <!-- Background Ambience -->
+    <div class="noise-overlay" aria-hidden="true"></div>
+    <div class="gold-ambient gold-ambient-1" aria-hidden="true"></div>
+    <div class="gold-ambient gold-ambient-2" aria-hidden="true"></div>
 
     <!-- Navigation Bar -->
     <header class="header">
         <div class="container">
             <div class="nav-wrap">
-                <a href="#" class="logo">
+                <a href="#hero" class="logo" aria-label="Hussein Mohamed Home">
                     <div class="logo-symbol">H</div>
                     <span class="logo-text">HUSSEIN MOHAMED</span>
                 </a>
-                <ul class="nav-links">
-                    <li><a href="#work" class="nav-link">Selected Work</a></li>
-                    <li><a href="#services" class="nav-link">Capabilities</a></li>
-                    <li><a href="#experience" class="nav-link">Experience</a></li>
-                    <li><a href="https://drive.google.com/file/d/1V9uN3kB2YKY9JpilXycZ5_50x0i0M9-Z/view?usp=drive_link" target="_blank" class="nav-link"><i class="fas fa-file-pdf" style="margin-right: 6px; color: var(--gold-primary);"></i>Resume</a></li>
-                    <li><a href="https://wa.me/201012151893" target="_blank" class="btn-luxury btn-outline-gold"><i class="fab fa-whatsapp"></i> Let's Talk</a></li>
-                </ul>
+
+                <nav class="desktop-nav" aria-label="Primary Navigation">
+                    <ul class="nav-links">
+                        <li><a href="#featured" class="nav-link">Featured</a></li>
+                        <li><a href="#work" class="nav-link">Work</a></li>
+                        <li><a href="#services" class="nav-link">Services</a></li>
+                        <li><a href="#about" class="nav-link">About & Experience</a></li>
+                        <li><a href="https://drive.google.com/file/d/1V9uN3kB2YKY9JpilXycZ5_50x0i0M9-Z/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="nav-link nav-resume-link"><i class="fas fa-file-pdf" style="margin-right: 6px; color: var(--gold-primary);"></i>Resume</a></li>
+                        <li><a href="https://wa.me/201012151893" target="_blank" rel="noopener noreferrer" class="btn-luxury btn-outline-gold"><i class="fab fa-whatsapp"></i> Let's Talk</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileNav">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
             </div>
         </div>
     </header>
 
-    <main>
-        <!-- Hero Section -->
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobileNav" aria-hidden="true">
+        <div class="mobile-nav-inner">
+            <ul class="mobile-nav-list">
+                <li><a href="#featured" class="mobile-nav-link">Featured Project</a></li>
+                <li><a href="#work" class="mobile-nav-link">Selected Work</a></li>
+                <li><a href="#services" class="mobile-nav-link">Services</a></li>
+                <li><a href="#about" class="mobile-nav-link">About & Experience</a></li>
+                <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+                <li><a href="https://drive.google.com/file/d/1V9uN3kB2YKY9JpilXycZ5_50x0i0M9-Z/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="mobile-nav-link gold-highlight"><i class="fas fa-file-pdf"></i> Download Resume</a></li>
+            </ul>
+            <div class="mobile-nav-cta">
+                <a href="https://wa.me/201012151893" target="_blank" rel="noopener noreferrer" class="btn-luxury btn-primary-gold w-100">
+                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <!-- 1. Compact Hero Section -->
         <section id="hero" class="hero-section">
             <div class="container">
                 <div class="hero-grid">
-                    <!-- Left: Content -->
+                    <!-- Left: Compact Content -->
                     <div class="hero-content">
                         <div class="hero-badge reveal">
                             <span class="badge-dot"></span>
-                            Available for Selected Projects
+                            <span>Hussein Mohamed &bull; Portfolio</span>
                         </div>
                         <h1 class="hero-title heading-font reveal delay-1">
-                            Cinematic Vision.<br>
-                            <span class="gold-text">Flawless Delivery.</span>
+                            Video Editing &amp; Motion Design <span class="gold-text">for Brands</span>
                         </h1>
-                        <h2 class="hero-role reveal delay-2">
-                            <span>Video Editor</span>
-                            <span class="role-divider">•</span>
-                            <span>Motion Designer</span>
-                            <span class="role-divider">•</span>
-                            <span>Videographer</span>
-                        </h2>
-                        <p class="hero-desc reveal delay-3">
-                            Crafting high-impact visual narratives with meticulous attention to pacing, sound design, and color. From concept capture on set at Zikola Marketing to high-end post-production.
+                        <p class="hero-desc reveal delay-2">
+                            I help brands turn ideas into compelling commercials, social reels, and motion graphics—from filming to the final cut.
                         </p>
-                        <div class="hero-actions reveal delay-4">
+                        <div class="hero-actions reveal delay-3">
                             <a href="#work" class="btn-luxury btn-primary-gold">
-                                <i class="fas fa-play" style="font-size: 0.75rem;"></i> Explore Showreel
+                                <i class="fas fa-play" style="font-size: 0.75rem;"></i> View Selected Work
                             </a>
-                            <a href="https://drive.google.com/file/d/1V9uN3kB2YKY9JpilXycZ5_50x0i0M9-Z/view?usp=drive_link" target="_blank" class="btn-luxury btn-outline-gold">
-                                <i class="fas fa-arrow-down"></i> Download Resume
+                            <a href="https://wa.me/201012151893" target="_blank" rel="noopener noreferrer" class="btn-luxury btn-outline-gold">
+                                <i class="fab fa-whatsapp"></i> Let's Talk
                             </a>
                         </div>
-                        <div class="hero-stats reveal delay-4">
+                        <div class="hero-stats reveal delay-3">
                             <div class="stat-item">
-                                <h3 class="counter-val" data-target="5" data-suffix="+">5+</h3>
-                                <p>Years Crafting</p>
+                                <h3 class="stat-number">5+</h3>
+                                <p class="stat-label">Years Experience</p>
                             </div>
                             <div class="stat-item">
-                                <h3 class="counter-val" data-target="100" data-suffix="+">100+</h3>
-                                <p>Projects Completed</p>
+                                <h3 class="stat-number">100+</h3>
+                                <p class="stat-label">Completed Projects</p>
                             </div>
                             <div class="stat-item">
-                                <h3 class="counter-val" data-target="100" data-suffix="%">100%</h3>
-                                <p>Client Dedication</p>
+                                <h3 class="stat-number">3</h3>
+                                <p class="stat-label">Core Disciplines</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Right: Visual Portrait with 3D Tilt -->
-                    <div class="hero-visual-wrap reveal delay-2">
+                    <!-- Right: Portrait (Desktop Hero, Hidden on Mobile Hero -> moved to About) -->
+                    <div class="hero-visual-wrap reveal delay-2 desktop-only-portrait">
                         <div class="portrait-frame" data-tilt>
                             <div class="card-shine"></div>
                             <span class="frame-corner corner-tl"></span>
@@ -110,12 +132,12 @@
                             <span class="frame-corner corner-br"></span>
 
                             <div class="portrait-inner">
-                                <img src="hussein.png" alt="Hussein Mohamed Portrait" class="portrait-img">
+                                <img src="hussein.png" alt="Hussein Mohamed, Video Editor & Videographer" class="portrait-img">
                             </div>
 
                             <div class="portrait-badge-overlay">
                                 <div class="portrait-badge-title">Hussein Mohamed</div>
-                                <div class="portrait-badge-sub">Video Editor & Videographer – Zikola Marketing</div>
+                                <div class="portrait-badge-sub">Video Editor &bull; Motion Designer &bull; Videographer</div>
                             </div>
                         </div>
                     </div>
@@ -123,91 +145,200 @@
             </div>
         </section>
 
-        <!-- Selected Work Showcase -->
-        <section id="work" class="section-padding">
+        <!-- 2. Featured Project Showcase -->
+        <section id="featured" class="section-padding featured-section">
             <div class="container">
                 <div class="section-head reveal">
-                    <span class="section-tagline">Portfolio</span>
-                    <h2 class="section-title heading-font">Selected <span class="gold-text">Showcase</span></h2>
-                    <p class="section-sub">A curated selection of commercial promos, motion graphics, and narrative editing.</p>
+                    <span class="section-tagline">Spotlight</span>
+                    <h2 class="section-title heading-font">Featured <span class="gold-text">Project</span></h2>
+                    <p class="section-sub">A marquee showcase of dynamic motion graphics and brand animation.</p>
                 </div>
 
-                <div class="work-grid">
-                    <!-- Project 1: Motion Graphics -->
-                    <div class="video-card-luxury reveal" data-tilt>
-                        <div class="card-shine"></div>
-                        <div class="video-wrapper">
-                            <iframe src="https://drive.google.com/file/d/1YcXmeuhQ5T48sygDjmgYUc1qUzdv1T_Q/preview" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                <div class="featured-card-wrap reveal delay-1">
+                    <div class="featured-card">
+                        <div class="featured-preview" style="background: radial-gradient(circle at center, #1b202c 0%, #0d1017 100%);">
+                            <div class="preview-backdrop-decor">
+                                <i class="fas fa-cube motion-icon-bg"></i>
+                            </div>
+                            <div class="featured-preview-overlay">
+                                <button class="btn-play-trigger" data-video-id="1YcXmeuhQ5T48sygDjmgYUc1qUzdv1T_Q" data-video-title="Motion Design &amp; 2D Animation" data-video-category="Motion Graphics" data-video-aspect="landscape" aria-label="Play Motion Design &amp; 2D Animation project">
+                                    <span class="play-icon-glow"></span>
+                                    <i class="fas fa-play"></i>
+                                </button>
+                                <span class="preview-cta-text">Click to Watch Featured Video</span>
+                            </div>
                         </div>
-                        <div class="video-meta">
-                            <span class="video-tag"><i class="fas fa-cube"></i> Motion Graphics</span>
-                            <h3 class="video-title">Motion Design & 2D Animation</h3>
-                            <p class="video-desc">Dynamic visual pacing and branded typography animation built in After Effects.</p>
-                        </div>
-                    </div>
-
-                    <!-- Project 2: Real Estate Promo -->
-                    <div class="video-card-luxury reveal delay-1" data-tilt>
-                        <div class="card-shine"></div>
-                        <div class="video-wrapper">
-                            <iframe src="https://drive.google.com/file/d/1kHTwfeSLgKG_TOdEBmC8sHs1UVyuf88t/preview" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                        </div>
-                        <div class="video-meta">
-                            <span class="video-tag"><i class="fas fa-building"></i> Commercial</span>
-                            <h3 class="video-title">Luxury Real Estate Showcase</h3>
-                            <p class="video-desc">Cinematic architectural grading, fluid speed ramps, and immersive soundscapes.</p>
-                        </div>
-                    </div>
-
-                    <!-- Project 3: Food & Restaurant Ad -->
-                    <div class="video-card-luxury reveal delay-2" data-tilt>
-                        <div class="card-shine"></div>
-                        <div class="video-wrapper">
-                            <iframe src="https://drive.google.com/file/d/1LbjOp8BLYtnQdg6ghc2Gs6HAV1n0kfaC/preview" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                        </div>
-                        <div class="video-meta">
-                            <span class="video-tag"><i class="fas fa-utensils"></i> Commercial</span>
-                            <h3 class="video-title">Cafe & Restaurant Brand Promo</h3>
-                            <p class="video-desc">Fast-paced, sensory-driven editing highlighting atmosphere, taste, and hospitality.</p>
-                        </div>
-                    </div>
-
-                    <!-- Project 4: Reels & Short-Form -->
-                    <div class="video-card-luxury reveal delay-1" data-tilt>
-                        <div class="card-shine"></div>
-                        <div class="video-wrapper">
-                            <iframe src="https://drive.google.com/file/d/1AJOJQo5IfPGGVZp7OcmNCXk5EPYV_fbH/preview" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                        </div>
-                        <div class="video-meta">
-                            <span class="video-tag"><i class="fas fa-film"></i> Social / Reels</span>
-                            <h3 class="video-title">High-Retention Performance Reels</h3>
-                            <p class="video-desc">Optimized hooks, synchronized audio beats, and punchy visual storytelling.</p>
-                        </div>
-                    </div>
-
-                    <!-- Project 5: YouTube Content -->
-                    <div class="video-card-luxury reveal delay-2" data-tilt>
-                        <div class="card-shine"></div>
-                        <div class="video-wrapper">
-                            <iframe src="https://drive.google.com/file/d/1-ERacV6U6xaUAGD1TaN84p59_Bfzhbk0/preview" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                        </div>
-                        <div class="video-meta">
-                            <span class="video-tag"><i class="fab fa-youtube"></i> Digital Media</span>
-                            <h3 class="video-title">Long-Form Storytelling & YouTube</h3>
-                            <p class="video-desc">Comprehensive story curation, pacing retention, and documentary-style structure.</p>
+                        <div class="featured-info">
+                            <div class="featured-tags">
+                                <span class="category-pill"><i class="fas fa-cube"></i> Motion Graphics</span>
+                                <span class="pill-muted">After Effects</span>
+                            </div>
+                            <h3 class="featured-title heading-font">Motion Design &amp; 2D Animation</h3>
+                            <p class="featured-desc">
+                                Dynamic visual pacing and branded typography animation built in Adobe After Effects. Showcasing kinetic title sequences, smooth shape transformations, and rhythmic audio synchronization.
+                            </p>
+                            <div class="featured-actions">
+                                <button class="btn-play-trigger-circle" data-video-id="1YcXmeuhQ5T48sygDjmgYUc1qUzdv1T_Q" data-video-title="Motion Design &amp; 2D Animation" data-video-category="Motion Graphics" data-video-aspect="landscape" aria-label="Play Motion Design &amp; 2D Animation" title="Play Video">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                                <a href="https://drive.google.com/file/d/1YcXmeuhQ5T48sygDjmgYUc1qUzdv1T_Q/view" target="_blank" rel="noopener noreferrer" class="btn-luxury btn-outline-gold" title="Open on Google Drive">
+                                    <i class="fas fa-external-link-alt"></i> <span>Open Link</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Expertise & Services -->
-        <section id="services" class="section-padding" style="background: var(--bg-secondary);">
+        <!-- 3. Selected Work Section -->
+        <section id="work" class="section-padding">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="section-tagline">Portfolio</span>
+                    <h2 class="section-title heading-font">Selected <span class="gold-text">Work</span></h2>
+                    <p class="section-sub">Browse commercial edits, social media reels, restaurant campaigns, and long-form storytelling.</p>
+                </div>
+
+                <div class="work-grid">
+                    <!-- Project 1: Real Estate -->
+                    <article class="work-card reveal" data-tilt>
+                        <div class="card-shine"></div>
+                        <div class="work-thumbnail-box" style="background: linear-gradient(135deg, #131720 0%, #1f2736 100%);">
+                            <div class="thumbnail-inner-art">
+                                <i class="fas fa-building category-watermark"></i>
+                                <span class="aspect-badge">16:9 Landscape</span>
+                            </div>
+                            <button class="btn-play-trigger thumbnail-play-btn" data-video-id="1kHTwfeSLgKG_TOdEBmC8sHs1UVyuf88t" data-video-title="Luxury Real Estate Promo" data-video-category="Commercial" data-video-aspect="landscape" aria-label="Play Luxury Real Estate Promo">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="work-card-body">
+                            <div class="work-card-header">
+                                <span class="category-pill"><i class="fas fa-building"></i> Commercial</span>
+                                <span class="pill-muted">Premiere Pro</span>
+                            </div>
+                            <h3 class="work-card-title heading-font">Luxury Real Estate Promo</h3>
+                            <p class="work-card-desc">
+                                Architectural pacing, cinematic color grading, speed ramps, and immersive ambient audio designed to highlight premium interior spaces.
+                            </p>
+                            <div class="work-card-footer">
+                                <button class="btn-card-action btn-play-trigger" data-video-id="1kHTwfeSLgKG_TOdEBmC8sHs1UVyuf88t" data-video-title="Luxury Real Estate Promo" data-video-category="Commercial" data-video-aspect="landscape">
+                                    <i class="fas fa-play"></i> Watch Video
+                                </button>
+                                <a href="https://drive.google.com/file/d/1kHTwfeSLgKG_TOdEBmC8sHs1UVyuf88t/view" target="_blank" rel="noopener noreferrer" class="link-external-card" aria-label="Open Luxury Real Estate Promo in Google Drive">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Cafe & Restaurant -->
+                    <article class="work-card reveal delay-1" data-tilt>
+                        <div class="card-shine"></div>
+                        <div class="work-thumbnail-box" style="background: linear-gradient(135deg, #1c1514 0%, #291c1b 100%);">
+                            <div class="thumbnail-inner-art">
+                                <i class="fas fa-utensils category-watermark"></i>
+                                <span class="aspect-badge">16:9 Landscape</span>
+                            </div>
+                            <button class="btn-play-trigger thumbnail-play-btn" data-video-id="1LbjOp8BLYtnQdg6ghc2Gs6HAV1n0kfaC" data-video-title="Cafe &amp; Restaurant Brand Promo" data-video-category="Commercial" data-video-aspect="landscape" aria-label="Play Cafe &amp; Restaurant Brand Promo">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="work-card-body">
+                            <div class="work-card-header">
+                                <span class="category-pill"><i class="fas fa-utensils"></i> Commercial</span>
+                                <span class="pill-muted">Food &amp; Beverage</span>
+                            </div>
+                            <h3 class="work-card-title heading-font">Cafe &amp; Restaurant Brand Promo</h3>
+                            <p class="work-card-desc">
+                                Dynamic sensory editing focused on appetizing food close-ups, warm atmosphere, hospitality rhythm, and customer engagement.
+                            </p>
+                            <div class="work-card-footer">
+                                <button class="btn-card-action btn-play-trigger" data-video-id="1LbjOp8BLYtnQdg6ghc2Gs6HAV1n0kfaC" data-video-title="Cafe &amp; Restaurant Brand Promo" data-video-category="Commercial" data-video-aspect="landscape">
+                                    <i class="fas fa-play"></i> Watch Video
+                                </button>
+                                <a href="https://drive.google.com/file/d/1LbjOp8BLYtnQdg6ghc2Gs6HAV1n0kfaC/view" target="_blank" rel="noopener noreferrer" class="link-external-card" aria-label="Open Cafe &amp; Restaurant Brand Promo in Google Drive">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Social Reels (Vertical 9:16) -->
+                    <article class="work-card reveal delay-2" data-tilt>
+                        <div class="card-shine"></div>
+                        <div class="work-thumbnail-box vertical-hint-box" style="background: linear-gradient(135deg, #1a1724 0%, #231b33 100%);">
+                            <div class="thumbnail-inner-art">
+                                <i class="fas fa-mobile-alt category-watermark"></i>
+                                <span class="aspect-badge highlight-aspect">9:16 Vertical Reel</span>
+                            </div>
+                            <button class="btn-play-trigger thumbnail-play-btn" data-video-id="1AJOJQo5IfPGGVZp7OcmNCXk5EPYV_fbH" data-video-title="High-Retention Social Reels" data-video-category="Social Reels" data-video-aspect="vertical" aria-label="Play High-Retention Social Reels">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="work-card-body">
+                            <div class="work-card-header">
+                                <span class="category-pill"><i class="fas fa-film"></i> Social Reels</span>
+                                <span class="pill-muted">Vertical 9:16</span>
+                            </div>
+                            <h3 class="work-card-title heading-font">High-Retention Performance Reels</h3>
+                            <p class="work-card-desc">
+                                Short-form video tailored for Instagram and TikTok. Features rapid hooks, sound-synced cuts, and visual emphasis for high completion rate.
+                            </p>
+                            <div class="work-card-footer">
+                                <button class="btn-card-action btn-play-trigger" data-video-id="1AJOJQo5IfPGGVZp7OcmNCXk5EPYV_fbH" data-video-title="High-Retention Social Reels" data-video-category="Social Reels" data-video-aspect="vertical">
+                                    <i class="fas fa-play"></i> Watch Video
+                                </button>
+                                <a href="https://drive.google.com/file/d/1AJOJQo5IfPGGVZp7OcmNCXk5EPYV_fbH/view" target="_blank" rel="noopener noreferrer" class="link-external-card" aria-label="Open High-Retention Social Reels in Google Drive">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: YouTube Content -->
+                    <article class="work-card reveal delay-3" data-tilt>
+                        <div class="card-shine"></div>
+                        <div class="work-thumbnail-box" style="background: linear-gradient(135deg, #1b1616 0%, #291b1b 100%);">
+                            <div class="thumbnail-inner-art">
+                                <i class="fab fa-youtube category-watermark"></i>
+                                <span class="aspect-badge">16:9 Landscape</span>
+                            </div>
+                            <button class="btn-play-trigger thumbnail-play-btn" data-video-id="1-ERacV6U6xaUAGD1TaN84p59_Bfzhbk0" data-video-title="Long-Form YouTube Video" data-video-category="Digital Media" data-video-aspect="landscape" aria-label="Play Long-Form YouTube Video">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="work-card-body">
+                            <div class="work-card-header">
+                                <span class="category-pill"><i class="fab fa-youtube"></i> Digital Media</span>
+                                <span class="pill-muted">YouTube</span>
+                            </div>
+                            <h3 class="work-card-title heading-font">Long-Form Storytelling Video</h3>
+                            <p class="work-card-desc">
+                                Comprehensive multi-cam curation, B-roll integration, and narrative structuring to sustain audience attention across extended runtimes.
+                            </p>
+                            <div class="work-card-footer">
+                                <button class="btn-card-action btn-play-trigger" data-video-id="1-ERacV6U6xaUAGD1TaN84p59_Bfzhbk0" data-video-title="Long-Form YouTube Video" data-video-category="Digital Media" data-video-aspect="landscape">
+                                    <i class="fas fa-play"></i> Watch Video
+                                </button>
+                                <a href="https://drive.google.com/file/d/1-ERacV6U6xaUAGD1TaN84p59_Bfzhbk0/view" target="_blank" rel="noopener noreferrer" class="link-external-card" aria-label="Open Long-Form YouTube Video in Google Drive">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Services Section -->
+        <section id="services" class="section-padding bg-secondary-section">
             <div class="container">
                 <div class="section-head reveal">
                     <span class="section-tagline">Capabilities</span>
-                    <h2 class="section-title heading-font">Creative <span class="gold-text">Expertise</span></h2>
-                    <p class="section-sub">End-to-end production competencies designed for premium brand standards.</p>
+                    <h2 class="section-title heading-font">Creative <span class="gold-text">Services</span></h2>
+                    <p class="section-sub">Comprehensive production solutions designed to solve client creative and marketing needs.</p>
                 </div>
 
                 <div class="services-grid">
@@ -215,8 +346,10 @@
                     <div class="service-card reveal" data-tilt>
                         <div class="card-shine"></div>
                         <div class="service-icon"><i class="fas fa-film"></i></div>
-                        <h3 class="service-title">Post-Production & Editing</h3>
-                        <p class="service-desc">Precision cutting, pacing, narrative structuring, audio balancing, and industry-standard color grading.</p>
+                        <h3 class="service-title heading-font">Post-Production &amp; Editing</h3>
+                        <p class="service-desc">
+                            Story structure, precision cutting, audio balancing, sound design, and color grading for commercials, promos, and digital campaigns.
+                        </p>
                         <div class="service-tags">
                             <span>Premiere Pro</span>
                             <span>CapCut Pro</span>
@@ -228,12 +361,14 @@
                     <div class="service-card reveal delay-1" data-tilt>
                         <div class="card-shine"></div>
                         <div class="service-icon"><i class="fas fa-cube"></i></div>
-                        <h3 class="service-title">Motion Design & VFX</h3>
-                        <p class="service-desc">Sophisticated 2D animations, title sequences, logo reveals, lower thirds, and screen replacements.</p>
+                        <h3 class="service-title heading-font">Motion Design &amp; VFX</h3>
+                        <p class="service-desc">
+                            Branded kinetic typography, 2D animations, title sequences, logo reveals, and graphic overlays that make video content pop.
+                        </p>
                         <div class="service-tags">
                             <span>After Effects</span>
-                            <span>Kinetic Typography</span>
-                            <span>Visual Effects</span>
+                            <span>Kinetic Type</span>
+                            <span>2D Animation</span>
                         </div>
                     </div>
 
@@ -241,12 +376,14 @@
                     <div class="service-card reveal delay-2" data-tilt>
                         <div class="card-shine"></div>
                         <div class="service-icon"><i class="fas fa-video"></i></div>
-                        <h3 class="service-title">Videography & Camera Ops</h3>
-                        <p class="service-desc">On-set filming, cinematic framing, multi-point lighting, and complete on-ground production management.</p>
+                        <h3 class="service-title heading-font">Videography &amp; Camera Ops</h3>
+                        <p class="service-desc">
+                            On-location and studio video shooting with professional camera operation, multi-point lighting, and production coordination.
+                        </p>
                         <div class="service-tags">
                             <span>Camera Operation</span>
                             <span>Studio Lighting</span>
-                            <span>Direction</span>
+                            <span>Video Production</span>
                         </div>
                     </div>
 
@@ -254,84 +391,144 @@
                     <div class="service-card reveal delay-3" data-tilt>
                         <div class="card-shine"></div>
                         <div class="service-icon"><i class="fas fa-pen-nib"></i></div>
-                        <h3 class="service-title">Visual Branding & Assets</h3>
-                        <p class="service-desc">High-impact thumbnails, promotional graphics, brand collateral, and creative asset generation.</p>
+                        <h3 class="service-title heading-font">Graphic Design &amp; Assets</h3>
+                        <p class="service-desc">
+                            High-converting YouTube thumbnails, social campaign graphics, promotional banners, and visual assets supporting video launches.
+                        </p>
                         <div class="service-tags">
                             <span>Photoshop</span>
                             <span>Illustrator</span>
-                            <span>Visual Identity</span>
+                            <span>Thumbnails</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Experience & Journey -->
-        <section id="experience" class="section-padding">
+        <!-- 5. About & Experience Section -->
+        <section id="about" class="section-padding">
             <div class="container">
                 <div class="about-grid">
+                    <!-- About Narrative & Mobile Portrait -->
                     <div class="about-narrative reveal">
                         <span class="section-tagline">Background</span>
-                        <h3 class="heading-font">Dedicated to the Art of <span class="gold-text">Visual Impact</span></h3>
-                        <p>
-                            Combining technical computer science precision with an artistic eye for cinematic storytelling, I help forward-thinking agencies and brands turn ideas into unforgettable screen experiences.
+                        <h2 class="section-title heading-font">About <span class="gold-text">Hussein</span></h2>
+
+                        <!-- Mobile Portrait Card (Only visible on Mobile/Tablet) -->
+                        <div class="mobile-only-portrait-wrap">
+                            <div class="portrait-frame" data-tilt>
+                                <div class="card-shine"></div>
+                                <span class="frame-corner corner-tl"></span>
+                                <span class="frame-corner corner-tr"></span>
+                                <span class="frame-corner corner-bl"></span>
+                                <span class="frame-corner corner-br"></span>
+                                <div class="portrait-inner">
+                                    <img src="hussein.png" alt="Hussein Mohamed, Video Editor & Videographer" class="portrait-img">
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="about-body-text">
+                            I am a video editor, motion designer, and videographer with a Bachelor’s Degree in Computer Science, based in Mansoura, Egypt.
                         </p>
-                        <p>
-                            Currently based in Mansoura, Egypt, working both locally on-set and globally on remote post-production projects.
+                        <p class="about-body-text">
+                            My workflow bridges technical precision with narrative aesthetics. From operating cameras and arranging lighting on set to building motion graphics and completing the final color grade, I ensure projects deliver clear brand value and hold viewer attention.
                         </p>
-                        <a href="https://drive.google.com/file/d/1V9uN3kB2YKY9JpilXycZ5_50x0i0M9-Z/view?usp=drive_link" target="_blank" class="btn-luxury btn-primary-gold">
-                            <i class="fas fa-file-contract"></i> View Full Credentials
-                        </a>
+
+                        <div class="about-details-list">
+                            <div class="about-detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <span class="detail-label">Location</span>
+                                    <span class="detail-val">Mansoura, Egypt (Available Globally)</span>
+                                </div>
+                            </div>
+                            <div class="about-detail-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <div>
+                                    <span class="detail-label">Education</span>
+                                    <span class="detail-val">Bachelor’s in Computer Science</span>
+                                </div>
+                            </div>
+                            <div class="about-detail-item">
+                                <i class="fas fa-language"></i>
+                                <div>
+                                    <span class="detail-label">Languages</span>
+                                    <span class="detail-val">Arabic (Native) &bull; English (Fluent)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-resume-action">
+                            <a href="https://drive.google.com/file/d/1V9uN3kB2YKY9JpilXycZ5_50x0i0M9-Z/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-luxury btn-primary-gold">
+                                <i class="fas fa-file-pdf"></i> Download Full Resume
+                            </a>
+                        </div>
                     </div>
 
-                    <div class="timeline reveal delay-2">
-                        <!-- Current Role -->
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <span class="timeline-badge">2024 — Present</span>
-                            <h4 class="timeline-role">Video Editor & Videographer</h4>
-                            <div class="timeline-company">Zikola Marketing</div>
-                            <p class="timeline-desc">Leading video creative production from camera capture to final high-retention commercial deliveries for agency clients.</p>
-                        </div>
+                    <!-- Clean Experience Timeline -->
+                    <div class="experience-column reveal delay-1">
+                        <span class="section-tagline">Career Track</span>
+                        <h2 class="section-title heading-font">Work <span class="gold-text">Experience</span></h2>
 
-                        <!-- Role 2 -->
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <span class="timeline-badge">Educator</span>
-                            <h4 class="timeline-role">Video Editing Instructor</h4>
-                            <div class="timeline-company">Creative Academy</div>
-                            <p class="timeline-desc">Mentored aspiring creators in workflow optimization, Premiere Pro fundamentals, and storytelling principles.</p>
-                        </div>
+                        <div class="timeline">
+                            <!-- Role 1: Current -->
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <span class="timeline-badge">2024 — Present</span>
+                                <h3 class="timeline-role heading-font">Video Editor &amp; Videographer</h3>
+                                <div class="timeline-company">Zikola Marketing</div>
+                                <p class="timeline-desc">
+                                    Currently working at Zikola Marketing, creating and editing video content from on-set camera operation and production to final cut delivery for agency clients.
+                                </p>
+                            </div>
 
-                        <!-- Role 3 -->
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <span class="timeline-badge">Leadership</span>
-                            <h4 class="timeline-role">Head of Media Department</h4>
-                            <div class="timeline-company">Megateam</div>
-                            <p class="timeline-desc">Directed multi-disciplinary media teams, coordinated campaign assets, and maintained production schedules.</p>
+                            <!-- Role 2: Instructor -->
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <span class="timeline-badge">Instruction</span>
+                                <h3 class="timeline-role heading-font">Video Editing Instructor</h3>
+                                <div class="timeline-company">Creative Academy &bull; Freelance</div>
+                                <p class="timeline-desc">
+                                    Taught foundational and advanced video editing techniques, Premiere Pro workflows, and storytelling principles to students.
+                                </p>
+                            </div>
+
+                            <!-- Role 3: Head of Media -->
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <span class="timeline-badge">Leadership</span>
+                                <h3 class="timeline-role heading-font">Head of Media</h3>
+                                <div class="timeline-company">Megateam</div>
+                                <p class="timeline-desc">
+                                    Led the media department and directed a creative team to deliver high-quality video content and digital assets on tight deadlines.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Call to Action -->
-        <section class="section-padding" style="padding-top: 40px;">
+        <!-- 6. Contact Section -->
+        <section id="contact" class="section-padding contact-section">
             <div class="container">
                 <div class="cta-box reveal" data-tilt>
                     <div class="card-shine"></div>
-                    <span class="section-tagline">Collaboration</span>
-                    <h2 class="cta-title heading-font">Ready to Elevate Your <span class="gold-text">Next Production?</span></h2>
+                    <span class="section-tagline">Start a Project</span>
+                    <h2 class="cta-title heading-font">Let's Build Something <span class="gold-text">Great Together</span></h2>
                     <p class="cta-sub">
-                        Whether you need a commercial campaign, social retention strategy, or full-scale videography, let's create something extraordinary.
+                        Have a project in mind, need commercial video editing, or looking for videography support? Reach out directly via WhatsApp or Email.
                     </p>
                     <div class="contact-options">
-                        <a href="https://wa.me/201012151893" target="_blank" class="btn-luxury btn-primary-gold">
-                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                        <a href="https://wa.me/201012151893" target="_blank" rel="noopener noreferrer" class="btn-luxury btn-primary-gold">
+                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp (+20 1012151893)
                         </a>
                         <a href="mailto:husseinmohamedjop157@gmail.com" class="btn-luxury btn-outline-gold">
                             <i class="fas fa-envelope"></i> husseinmohamedjop157@gmail.com
+                        </a>
+                        <a href="https://drive.google.com/file/d/1V9uN3kB2YKY9JpilXycZ5_50x0i0M9-Z/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-luxury btn-outline-gold">
+                            <i class="fas fa-file-pdf"></i> Download Resume
                         </a>
                     </div>
                 </div>
@@ -344,10 +541,50 @@
         <div class="container">
             <div class="footer-inner">
                 <p class="footer-copy">&copy; 2026 Hussein Mohamed. All rights reserved.</p>
-                <div class="footer-signature">Video Editor &bull; Motion Designer &bull; Videographer</div>
+                <div class="footer-signature">Video Editing &bull; Motion Design &bull; Videography</div>
             </div>
         </div>
     </footer>
+
+    <!-- Video Modal Viewer (Accessible, Responsive Landscape & 9:16 Vertical) -->
+    <div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-labelledby="modalVideoTitle" aria-hidden="true">
+        <div class="video-modal-backdrop" id="modalBackdrop"></div>
+        <div class="video-modal-dialog">
+            <div class="video-modal-content">
+                <div class="video-modal-header">
+                    <div>
+                        <span class="modal-badge" id="modalVideoBadge">Video Showcase</span>
+                        <h3 class="modal-title heading-font" id="modalVideoTitle">Loading Video...</h3>
+                    </div>
+                    <div class="modal-header-actions">
+                        <a href="#" id="modalDirectLink" target="_blank" rel="noopener noreferrer" class="modal-direct-btn" title="Open directly in Google Drive" aria-label="Open directly in Google Drive">
+                            <i class="fas fa-external-link-alt"></i> <span>Direct Link</span>
+                        </a>
+                        <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Close video player">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="video-modal-body">
+                    <!-- Responsive iframe container toggled between landscape (16:9) and vertical (9:16) -->
+                    <div class="modal-player-container landscape-mode" id="modalPlayerContainer">
+                        <div class="modal-loading-spinner" id="modalSpinner">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            <span>Loading Player...</span>
+                        </div>
+                        <iframe id="modalIframe" src="about:blank" title="Video Player" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="video-modal-footer">
+                    <p class="modal-fallback-note">
+                        Having trouble playing inside the browser? Click <a href="#" id="modalFallbackLink" target="_blank" rel="noopener noreferrer">Direct Link</a> to watch on Google Drive.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Custom JavaScript -->
     <script src="main.js"></script>
