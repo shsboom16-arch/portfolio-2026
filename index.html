@@ -7,10 +7,10 @@
     <meta name="description" content="Hussein Mohamed — Video Editor, Motion Designer & Videographer Portfolio. High-end visual storytelling and cinematic production.">
     <title>Hussein Mohamed | Video Editor, Motion Designer & Videographer</title>
 
-    <!-- Google Fonts: Cinzel (Serif Elegance) & Plus Jakarta Sans (Clean Modern) -->
+    <!-- Google Fonts: Syne (Sleek, Calm, Editorial Modern) & Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -20,6 +20,13 @@
 </head>
 
 <body>
+    <!-- Top Reading Progress Bar -->
+    <div class="reading-progress-bar"></div>
+
+    <!-- Custom Smooth Luxury Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-circle"></div>
+
     <!-- Atmospheric Background Elements -->
     <div class="noise-overlay"></div>
     <div class="gold-ambient gold-ambient-1"></div>
@@ -35,9 +42,9 @@
                 </a>
                 <ul class="nav-links">
                     <li><a href="#work" class="nav-link">Selected Work</a></li>
-                    <li><a href="#services" class="nav-link">Expertise</a></li>
+                    <li><a href="#services" class="nav-link">Capabilities</a></li>
                     <li><a href="#experience" class="nav-link">Experience</a></li>
-                    <li><a href="https://drive.google.com/file/d/1V9uN3kB2YKY9JpilXycZ5_50x0i0M9-Z/view?usp=drive_link" target="_blank" class="nav-link"><i class="fas fa-file-pdf" style="margin-right: 6px; color: var(--gold-primary);"></i>CV</a></li>
+                    <li><a href="https://drive.google.com/file/d/1V9uN3kB2YKY9JpilXycZ5_50x0i0M9-Z/view?usp=drive_link" target="_blank" class="nav-link"><i class="fas fa-file-pdf" style="margin-right: 6px; color: var(--gold-primary);"></i>Resume</a></li>
                     <li><a href="https://wa.me/201012151893" target="_blank" class="btn-luxury btn-outline-gold"><i class="fab fa-whatsapp"></i> Let's Talk</a></li>
                 </ul>
             </div>
@@ -51,25 +58,25 @@
                 <div class="hero-grid">
                     <!-- Left: Content -->
                     <div class="hero-content">
-                        <div class="hero-badge">
+                        <div class="hero-badge reveal">
                             <span class="badge-dot"></span>
-                            Available for Select Projects
+                            Available for Selected Projects
                         </div>
-                        <h1 class="hero-title serif">
+                        <h1 class="hero-title heading-font reveal delay-1">
                             Cinematic Vision.<br>
                             <span class="gold-text">Flawless Delivery.</span>
                         </h1>
-                        <h2 class="hero-role">
+                        <h2 class="hero-role reveal delay-2">
                             <span>Video Editor</span>
                             <span class="role-divider">•</span>
                             <span>Motion Designer</span>
                             <span class="role-divider">•</span>
                             <span>Videographer</span>
                         </h2>
-                        <p class="hero-desc">
+                        <p class="hero-desc reveal delay-3">
                             Crafting high-impact visual narratives with meticulous attention to pacing, sound design, and color. From concept capture on set at Zikola Marketing to high-end post-production.
                         </p>
-                        <div class="hero-actions">
+                        <div class="hero-actions reveal delay-4">
                             <a href="#work" class="btn-luxury btn-primary-gold">
                                 <i class="fas fa-play" style="font-size: 0.75rem;"></i> Explore Showreel
                             </a>
@@ -77,25 +84,26 @@
                                 <i class="fas fa-arrow-down"></i> Download Resume
                             </a>
                         </div>
-                        <div class="hero-stats">
+                        <div class="hero-stats reveal delay-4">
                             <div class="stat-item">
-                                <h3>5+</h3>
+                                <h3 class="counter-val" data-target="5" data-suffix="+">5+</h3>
                                 <p>Years Crafting</p>
                             </div>
                             <div class="stat-item">
-                                <h3>100+</h3>
+                                <h3 class="counter-val" data-target="100" data-suffix="+">100+</h3>
                                 <p>Projects Completed</p>
                             </div>
                             <div class="stat-item">
-                                <h3>100%</h3>
+                                <h3 class="counter-val" data-target="100" data-suffix="%">100%</h3>
                                 <p>Client Dedication</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Right: Visual Portrait -->
-                    <div class="hero-visual-wrap">
-                        <div class="portrait-frame">
+                    <!-- Right: Visual Portrait with 3D Tilt -->
+                    <div class="hero-visual-wrap reveal delay-2">
+                        <div class="portrait-frame" data-tilt>
+                            <div class="card-shine"></div>
                             <span class="frame-corner corner-tl"></span>
                             <span class="frame-corner corner-tr"></span>
                             <span class="frame-corner corner-bl"></span>
@@ -118,15 +126,16 @@
         <!-- Selected Work Showcase -->
         <section id="work" class="section-padding">
             <div class="container">
-                <div class="section-head">
+                <div class="section-head reveal">
                     <span class="section-tagline">Portfolio</span>
-                    <h2 class="section-title serif">Selected <span class="gold-text">Showcase</span></h2>
+                    <h2 class="section-title heading-font">Selected <span class="gold-text">Showcase</span></h2>
                     <p class="section-sub">A curated selection of commercial promos, motion graphics, and narrative editing.</p>
                 </div>
 
                 <div class="work-grid">
                     <!-- Project 1: Motion Graphics -->
-                    <div class="video-card-luxury">
+                    <div class="video-card-luxury reveal" data-tilt>
+                        <div class="card-shine"></div>
                         <div class="video-wrapper">
                             <iframe src="https://drive.google.com/file/d/1YcXmeuhQ5T48sygDjmgYUc1qUzdv1T_Q/preview" allow="autoplay; fullscreen" allowfullscreen></iframe>
                         </div>
@@ -138,7 +147,8 @@
                     </div>
 
                     <!-- Project 2: Real Estate Promo -->
-                    <div class="video-card-luxury">
+                    <div class="video-card-luxury reveal delay-1" data-tilt>
+                        <div class="card-shine"></div>
                         <div class="video-wrapper">
                             <iframe src="https://drive.google.com/file/d/1kHTwfeSLgKG_TOdEBmC8sHs1UVyuf88t/preview" allow="autoplay; fullscreen" allowfullscreen></iframe>
                         </div>
@@ -150,7 +160,8 @@
                     </div>
 
                     <!-- Project 3: Food & Restaurant Ad -->
-                    <div class="video-card-luxury">
+                    <div class="video-card-luxury reveal delay-2" data-tilt>
+                        <div class="card-shine"></div>
                         <div class="video-wrapper">
                             <iframe src="https://drive.google.com/file/d/1LbjOp8BLYtnQdg6ghc2Gs6HAV1n0kfaC/preview" allow="autoplay; fullscreen" allowfullscreen></iframe>
                         </div>
@@ -162,7 +173,8 @@
                     </div>
 
                     <!-- Project 4: Reels & Short-Form -->
-                    <div class="video-card-luxury">
+                    <div class="video-card-luxury reveal delay-1" data-tilt>
+                        <div class="card-shine"></div>
                         <div class="video-wrapper">
                             <iframe src="https://drive.google.com/file/d/1AJOJQo5IfPGGVZp7OcmNCXk5EPYV_fbH/preview" allow="autoplay; fullscreen" allowfullscreen></iframe>
                         </div>
@@ -174,7 +186,8 @@
                     </div>
 
                     <!-- Project 5: YouTube Content -->
-                    <div class="video-card-luxury">
+                    <div class="video-card-luxury reveal delay-2" data-tilt>
+                        <div class="card-shine"></div>
                         <div class="video-wrapper">
                             <iframe src="https://drive.google.com/file/d/1-ERacV6U6xaUAGD1TaN84p59_Bfzhbk0/preview" allow="autoplay; fullscreen" allowfullscreen></iframe>
                         </div>
@@ -191,15 +204,16 @@
         <!-- Expertise & Services -->
         <section id="services" class="section-padding" style="background: var(--bg-secondary);">
             <div class="container">
-                <div class="section-head">
+                <div class="section-head reveal">
                     <span class="section-tagline">Capabilities</span>
-                    <h2 class="section-title serif">Creative <span class="gold-text">Expertise</span></h2>
+                    <h2 class="section-title heading-font">Creative <span class="gold-text">Expertise</span></h2>
                     <p class="section-sub">End-to-end production competencies designed for premium brand standards.</p>
                 </div>
 
                 <div class="services-grid">
                     <!-- Service 1 -->
-                    <div class="service-card">
+                    <div class="service-card reveal" data-tilt>
+                        <div class="card-shine"></div>
                         <div class="service-icon"><i class="fas fa-film"></i></div>
                         <h3 class="service-title">Post-Production & Editing</h3>
                         <p class="service-desc">Precision cutting, pacing, narrative structuring, audio balancing, and industry-standard color grading.</p>
@@ -211,7 +225,8 @@
                     </div>
 
                     <!-- Service 2 -->
-                    <div class="service-card">
+                    <div class="service-card reveal delay-1" data-tilt>
+                        <div class="card-shine"></div>
                         <div class="service-icon"><i class="fas fa-cube"></i></div>
                         <h3 class="service-title">Motion Design & VFX</h3>
                         <p class="service-desc">Sophisticated 2D animations, title sequences, logo reveals, lower thirds, and screen replacements.</p>
@@ -223,7 +238,8 @@
                     </div>
 
                     <!-- Service 3 -->
-                    <div class="service-card">
+                    <div class="service-card reveal delay-2" data-tilt>
+                        <div class="card-shine"></div>
                         <div class="service-icon"><i class="fas fa-video"></i></div>
                         <h3 class="service-title">Videography & Camera Ops</h3>
                         <p class="service-desc">On-set filming, cinematic framing, multi-point lighting, and complete on-ground production management.</p>
@@ -235,7 +251,8 @@
                     </div>
 
                     <!-- Service 4 -->
-                    <div class="service-card">
+                    <div class="service-card reveal delay-3" data-tilt>
+                        <div class="card-shine"></div>
                         <div class="service-icon"><i class="fas fa-pen-nib"></i></div>
                         <h3 class="service-title">Visual Branding & Assets</h3>
                         <p class="service-desc">High-impact thumbnails, promotional graphics, brand collateral, and creative asset generation.</p>
@@ -253,9 +270,9 @@
         <section id="experience" class="section-padding">
             <div class="container">
                 <div class="about-grid">
-                    <div class="about-narrative">
+                    <div class="about-narrative reveal">
                         <span class="section-tagline">Background</span>
-                        <h3 class="serif">Dedicated to the Art of <span class="gold-text">Visual Impact</span></h3>
+                        <h3 class="heading-font">Dedicated to the Art of <span class="gold-text">Visual Impact</span></h3>
                         <p>
                             Combining technical computer science precision with an artistic eye for cinematic storytelling, I help forward-thinking agencies and brands turn ideas into unforgettable screen experiences.
                         </p>
@@ -267,7 +284,7 @@
                         </a>
                     </div>
 
-                    <div class="timeline">
+                    <div class="timeline reveal delay-2">
                         <!-- Current Role -->
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
@@ -302,9 +319,10 @@
         <!-- Call to Action -->
         <section class="section-padding" style="padding-top: 40px;">
             <div class="container">
-                <div class="cta-box">
+                <div class="cta-box reveal" data-tilt>
+                    <div class="card-shine"></div>
                     <span class="section-tagline">Collaboration</span>
-                    <h2 class="cta-title serif">Ready to Elevate Your <span class="gold-text">Next Production?</span></h2>
+                    <h2 class="cta-title heading-font">Ready to Elevate Your <span class="gold-text">Next Production?</span></h2>
                     <p class="cta-sub">
                         Whether you need a commercial campaign, social retention strategy, or full-scale videography, let's create something extraordinary.
                     </p>
